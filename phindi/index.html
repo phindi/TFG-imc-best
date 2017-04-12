@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	body{
+		background: url("/media/quirky/4054-775E/phindi/calamar.jpg");
+		background-size: cover;
+}
+p{
+  font-family: lato;
+  margin:0px;
+  padding:0px; 
+  font-style:normal; 
+  font-size:2.5em;
+}
+
+header{
+	text-align: center;
+	background-size: cover;
+	color: white;
+}
+a {
+      color: white;
+  }
+    h1 {
+      font-size: 5s0px;
+      text-align: center;
+      margin right: 50px;
+      font-family: cursive;
+      letter-spacing: -50px
+      color: #666;
+      text-transform: middle case;
+      text-shadow: 0 black;
+
+
+      }     
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn"
+	onclick="closeNav()">&times;</a>
+	  <a href="#">HOME</a>
+	  <a href="#">ABOUT</a>
+      <a href="#">MENU</a>
+      <a href="#">FIND US</a>
+      </div>
+
+	<h1>LA Dreamia</h1>
+	<center>NY 108 STREET,Gugulethu</center>
+	<center>TEL:021 720 0784</center>
+  <span style="font-size:30px;cursor:pointer"
+onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>
