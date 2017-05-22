@@ -1,0 +1,32 @@
+<video id="player" controls autoplay></video>
+<h2><button id="capture"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Photo-camera-in-circular-outlined-interface-button.svg/1000px-Photo-camera-in-circular-outlined-interface-button.svg.png" height="50"></button></h2>
+<canvas id="snapshot" width=420 height=340></canvas>
+<script>
+  var player = document.getElementById('player'); 
+  var snapshotCanvas = document.getElementById('snapshot');
+  var captureButton = document.getElementById('capture');
+
+  var handleSuccess = function(stream) {
+    // Attach the video stream to the video element and autoplay.
+    player.srcObject = stream;
+  };
+
+  captureButton.addEventListener('click', function() {
+    var context = snapshot.getContext('2d');
+    // Draw the video frame to the canvas.
+    context.drawImage(player, 0, 0, snapshotCanvas.width, 
+        snapshotCanvas.height);
+  });
+
+  navigator.mediaDevices.getUserMedia({video: true})
+      .then(handleSuccess);
+</script>
+<style type="text/css">
+body{
+  background: url("https://2.bp.blogspot.com/-fju7VH92y8U/Upx_96vZu4I/AAAAAAAADVE/ZdtRZcF3K-8/s1600/studio+backgrounds+clouds+effect+08.jpg");
+  background-size: 800px;
+}   
+  h2{
+  text-align: center;
+}
+</style>

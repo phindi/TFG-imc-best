@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<img src="http://www.splashpr.co.za/wp-content/uploads/2016/02/TFG-logo-purple-horizontal-left.jpg";
+      style="height: 99px;" width="300px;" id="image"><img src="">
+<div class="Wrapper">
+  <input type="checkbox"><img src="https://cdn.shopify.com/s/files/1/1061/1924/files/Happy_Emoji_Icon.png?11214052019865124406" alt="Smiley face" height="100" width="90"/>
+  <input type="checkbox"><img src="https://s-media-cache-ak0.pinimg.com/originals/d2/a3/81/d2a381e492ca9483876ecca2747a3be7.png" alt="Smiley face" height="100" width="90"/>
+</div>  
+<br><br>
+<select name="" class="dropdown">
+<option value="Category">Category</option>
+  <option value="In-Store">In-Store
+  <option value="Operational">Operational
+  <option value="Planning/Buying">Planning/Buying
+  <option value="Quality">Quality
+  <option value="Stock">Stock
+  <option value="On-line">On-line
+    </select>
+    <br><br>
+<select name="" class="dropdown">
+<option value="">Summary</option>
+  <option value="Operational">Operational
+      <option value="Store hygiene">Store hygiene     
+      <option value="Staff Atitude">Staff Atitude
+      <option value="Shelf Pricing">Shelf Pricing
+      <option value="Ticket Pricing">Ticket Pricing
+      <option value="Stock Quality">Stock Quality
+</select>
+<br><br>
+<select name="" class="dropdown">
+<option value="">Who ?</option>
+      <option value="Store Mananger">Store Manager     
+      <option value="Area Manager">Area Manager
+      <option value="Regional Manager">Regional Manager
+      <option value="Central Operations">Central Operations
+      <option value="Central Buying and Planing">Central Buying and Planing
+      <option value="General Admin">General Admin
+</select>
+<br><br>
+<a href="Location.html"><button id="button">Next</button></a>
+<style type="text/css">
+.dropdown{
+  width: 300px;
+  text-align: center;
+  height: 30px;
+  border-radius: 4px;
+  background-color: #faf0e6;
+}
+ #image{
+  border-radius: 25px;
+  
+}
+#button{
+    font-family: Monospace;
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #faf0e6;
+    color: #262626;
+}
+body{
+background: url("https://2.bp.blogspot.com/-fju7VH92y8U/Upx_96vZu4I/AAAAAAAADVE/ZdtRZcF3K-8/s1600/studio+backgrounds+clouds+effect+08.jpg");
+background-size: 500px;
+}   
+
+</style>
+<script type="text/javascript">
+    button = document.querySelector('button');
+datalist = document.querySelector('datalist');
+select = document.querySelector('select');
+options = select.options;
+
+/* on arrow button click, show/hide the DDL*/
+button.addEventListener('click', toggle_ddl);
+
+function toggle_ddl() {
+  if (datalist.style.display === '') {
+    datalist.style.display = 'block';
+    this.textContent = "▲";
+    /* If input already has a value, select that option from DDL */
+    var val = input.value;
+    for (var i = 0; i < options.length; i++) {
+      if (options[i].text === val) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+  } else hide_select();
+}
+
+/* when user selects an option from DDL, write it to text field */
+select.addEventListener('change', fill_input);
+
+function fill_input() {
+  input.value = options[this.selectedIndex].value;
+  hide_select();
+}
+
+/* when user wants to type in text field, hide DDL */
+input = document.querySelector('input');
+input.addEventListener('focus', hide_select);
+
+function hide_select() {
+  datalist.style.display = '';
+  button.textContent = "▼";
+}
+</script>
+<body>
+
+</body>
+</html>
